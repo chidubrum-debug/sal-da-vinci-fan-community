@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Admin · Sal Da Vinci Fan Community</title><link rel="stylesheet" href="/assets/styles.css"></head>
+<body class="admin-body">
+<header class="site-header"><a class="brand" href="/"><span class="brand-mark">SDV</span><span>SAL DA VINCI<small>COMMUNITY ADMIN</small></span></a><a class="admin-link" href="/">← Sito pubblico</a></header>
+<main class="admin-main">
+  <section id="login-panel" class="form-panel admin-login">
+    <p class="eyebrow">AREA RISERVATA</p><h1>Administrator login</h1><p class="section-copy">Accesso riservato agli amministratori autorizzati.</p>
+    <form id="login-form"><label>Email<input type="email" id="admin-email" required autocomplete="username"></label><label>Password<input type="password" id="admin-password" required autocomplete="current-password"></label><button class="button button-gold" type="submit">Accedi</button></form>
+    <button class="text-button" id="reset-password" type="button">Invia link per reimpostare la password</button><p class="form-status" id="login-status" role="status"></p>
+  </section>
+  <section id="dashboard" hidden>
+    <div class="dashboard-head"><div><p class="eyebrow">PANORAMICA</p><h1>Applications</h1></div><button id="logout" class="button button-outline">Esci</button></div>
+    <div class="stats"><div><small>Totale richieste</small><strong id="total-count">0</strong></div><div><small>In attesa</small><strong id="pending-count">0</strong></div><div><small>Approvate</small><strong id="approved-count">0</strong></div></div>
+    <div class="toolbar"><input id="search" placeholder="Cerca nome, email o paese…"><select id="status-filter"><option value="">Tutti gli stati</option><option value="pending">In attesa</option><option value="approved">Approvata</option><option value="rejected">Rifiutata</option></select><select id="type-filter"><option value="">Tutte le card</option><option value="membership">Membership</option><option value="fan">Fan Card</option></select></div>
+    <p id="dashboard-status" class="form-status" role="status"></p>
+    <div class="table-wrap"><table><thead><tr><th>Richiedente</th><th>Card</th><th>Paese</th><th>Stato</th><th>Pagamento</th><th>Data</th><th>Azioni</th></tr></thead><tbody id="applications-body"></tbody></table></div>
+    <p class="privacy-foot">I dati sono visibili solo agli amministratori autorizzati. I codici completi delle gift card non vengono richiesti né mostrati.</p>
+  </section>
+</main>
+<script src="/assets/config.js"></script><script type="module" src="/assets/admin.js"></script>
+</body></html>

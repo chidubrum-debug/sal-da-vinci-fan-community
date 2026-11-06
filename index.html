@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Una community indipendente per i fan di Sal Da Vinci.">
+  <title>Sal Da Vinci Fan Community</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home"><span class="brand-mark">SDV</span><span>SAL DA VINCI<small>FAN COMMUNITY</small></span></a>
+  <nav><a href="#about" data-i18n="navAbout">La community</a><a href="#apply" data-i18n="navJoin">Iscriviti</a><a href="#payments" data-i18n="navPayments">Pagamenti</a></nav>
+  <div class="header-actions"><select id="language" aria-label="Language"><option value="it">Italiano</option><option value="en">English</option></select><a class="admin-link" href="/admin.html">Admin</a></div>
+</header>
+<main>
+  <section class="hero page-section active" id="home" data-page="home">
+    <div class="hero-content">
+      <p class="eyebrow" data-i18n="eyebrow">UNA COMMUNITY INDIPENDENTE DI FAN</p>
+      <h1 data-i18n="heroTitle">La musica ci unisce.<br><em>La passione ci avvicina.</em></h1>
+      <p class="hero-copy" data-i18n="heroCopy">Uno spazio creato dai fan, per condividere l'amore per la musica di Sal Da Vinci.</p>
+      <a class="button button-gold" href="#apply" data-i18n="joinButton">Entra nella community</a>
+      <p class="disclaimer" data-i18n="disclaimer">Community indipendente, non ufficiale e non affiliata a Sal Da Vinci o ai suoi rappresentanti.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="gold-orbit"></div><div class="hero-monogram">SDV</div><div class="hero-caption">MUSIC · PASSION · COMMUNITY</div></div>
+  </section>
+
+  <section class="intro section page-section" id="about" data-page="about">
+    <p class="eyebrow" data-i18n="aboutEyebrow">BENVENUTO</p>
+    <h2 data-i18n="aboutTitle">Una passione da vivere insieme.</h2>
+    <p data-i18n="aboutCopy">Connettiti con altri appassionati, ricevi aggiornamenti della community e scegli la tua card. Questa iniziativa è gestita in modo indipendente dai fan.</p>
+    <div class="cards">
+      <button type="button" class="fan-card package-link" data-open-package="membership" aria-label="Open Membership Card package"><span class="card-kicker">SAL DA VINCI</span><strong>MEMBERSHIP</strong><span class="card-line"></span><small>FAN COMMUNITY · MEMBER</small></button>
+      <button type="button" class="fan-card fan-card-alt package-link" data-open-package="fan" aria-label="Open Fan Card package"><span class="card-kicker">SAL DA VINCI</span><strong>FAN CARD</strong><span class="card-line"></span><small>FAN COMMUNITY · SUPPORTER</small></button>
+    </div>
+  </section>
+
+  <section class="section apply-section page-section" id="apply" data-page="apply">
+    <p class="eyebrow" data-i18n="applyEyebrow">FAI PARTE DELLA COMMUNITY</p>
+    <h2 data-i18n="applyTitle">Scegli la tua card</h2>
+    <p class="section-copy" data-i18n="applyCopy">Compila la richiesta. Il team della community la esaminerà e ti contatterà via email.</p>
+    <form id="application-form" class="form-panel">
+      <div class="choice-row">
+        <label class="choice"><input type="radio" name="membership_type" value="membership" checked><span><b>Membership Card</b><small data-i18n="memberDesc">Richiesta di adesione</small></span></label>
+        <label class="choice"><input type="radio" name="membership_type" value="fan"><span><b>Fan Card</b><small data-i18n="fanDesc">Richiesta fan</small></span></label>
+      </div>
+      <div id="membership-tier-wrap" hidden style="margin:0 0 24px">
+        <p style="color:#d8d0c3;font-size:12px;margin:0 0 10px">Choose your membership tier</p>
+        <div class="tier-grid" style="margin:0;max-width:none">
+          <label class="tier-card"><input type="radio" name="membership_tier" value="Silver" required><span class="tier-name">Silver</span><strong>€150</strong><small>Membership tier</small></label>
+          <label class="tier-card"><input type="radio" name="membership_tier" value="Gold"><span class="tier-name">Gold</span><strong>€250</strong><small>Membership tier</small></label>
+          <label class="tier-card"><input type="radio" name="membership_tier" value="Platinum"><span class="tier-name">Platinum</span><strong>€500</strong><small>Membership tier</small></label>
+        </div>
+      </div>
+      <div class="form-grid">
+        <label><span data-i18n="fullName">Nome completo</span><input name="full_name" autocomplete="name" required maxlength="120"></label>
+        <label><span>Email</span><input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+        <label><span data-i18n="phone">Telefono</span><input name="phone" type="tel" autocomplete="tel" required maxlength="30"></label>
+        <label><span data-i18n="address">Indirizzo</span><input name="address" autocomplete="street-address" required maxlength="180"></label>
+        <label><span data-i18n="city">Città</span><input name="city" autocomplete="address-level2" required maxlength="100"></label>
+        <label><span data-i18n="country">Paese</span><input name="country" autocomplete="country-name" required maxlength="80"></label>
+        <label><span data-i18n="dateOfBirth">Data di nascita</span><input name="date_of_birth" type="date" autocomplete="bday" required></label>
+      </div>
+      <label class="upload-label"><span data-i18n="photo">Foto profilo (facoltativa)</span><input id="profile-photo" type="file" accept="image/jpeg,image/png,image/webp"><small data-i18n="photoHelp">Massimo 3 MB. La foto viene inviata all'amministratore solo con il tuo consenso e non viene salvata sul sito.</small></label>
+      <label class="consent"><input id="photo-consent" type="checkbox"><span data-i18n="photoConsent">Acconsento all'invio della foto caricata all'amministratore via email per questa richiesta. La foto non sarà pubblicata.</span></label>
+      <label class="consent"><input type="checkbox" name="privacy_consent" required><span data-i18n="privacyConsent">Confermo di aver letto l'informativa e acconsento al trattamento dei dati per gestire la mia richiesta.</span></label>
+      <button class="button button-gold" type="submit" data-i18n="submitApplication">Invia richiesta</button>
+      <p class="form-status" id="application-status" role="status"></p>
+    </form>
+  </section>
+
+  <section class="section payment-section page-section" id="payments" data-page="payments">
+    <p class="eyebrow" data-i18n="paymentEyebrow">PAGAMENTI</p><h2 data-i18n="paymentTitle">Metodi di pagamento</h2>
+    <p class="section-copy" data-i18n="paymentCopy">I metodi non ancora attivati sono indicati come non disponibili. Non inviare codici segreti o PIN di gift card.</p>
+    <div class="payment-grid">
+      <div class="payment-option unavailable"><b>PayPal</b><span data-i18n="unavailable">Non disponibile al momento</span></div>
+      <div class="payment-option unavailable"><b>Carte bancarie</b><span data-i18n="unavailable">Non disponibile al momento</span></div>
+      <div class="payment-option unavailable"><b>Bonifico bancario</b><span data-i18n="unavailable">Non disponibile al momento</span></div>
+      <button class="payment-option gift-card-option" id="gift-card-open" type="button" aria-expanded="false" aria-controls="gift-card-panel"><b>Gift card</b><span class="status-pill" data-i18n="giftAvailable">Available to submit proof</span><small data-i18n="giftHelp">Upload proof of purchase only, with all gift-card numbers, PINs, barcodes and redemption codes fully covered.</small></button>
+    </div>
+    <div class="gift-panel" id="gift-card-panel" hidden>
+      <h3 data-i18n="giftPanelTitle">Gift card proof of purchase</h3>
+      <p data-i18n="giftPanelCopy">Upload a receipt or proof-of-purchase image only. Cover every card number, PIN, barcode and redeemable code before selecting the image.</p>
+      <label class="upload-label"><span data-i18n="giftImageLabel">Choose proof image</span><input id="gift-proof-image" type="file" accept="image/jpeg,image/png,image/webp"><small data-i18n="giftImageHelp">JPG, PNG or WebP · maximum 3 MB · this preview does not send or store your image.</small></label>
+      <label class="consent"><input id="gift-redaction-confirm" type="checkbox"><span data-i18n="giftRedaction">I confirm all gift-card numbers, PINs, barcodes and redemption codes are completely hidden.</span></label>
+      <div class="gift-preview-wrap" id="gift-preview-wrap" hidden><img id="gift-proof-preview" alt="Redacted proof preview"></div>
+      <button class="button button-gold" id="gift-process" type="button" disabled data-i18n="giftProcess">Process image</button>
+      <div class="gift-progress" id="gift-progress" hidden><div class="gift-progress-track"><span id="gift-progress-fill"></span></div><p id="gift-progress-text" role="status" aria-live="polite"></p></div>
+      <p class="form-status" id="gift-result" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+<footer><span>© <span id="year"></span> Sal Da Vinci Fan Community</span><span data-i18n="footerNote">Community indipendente · Nessuna affiliazione ufficiale</span></footer>
+<script src="/assets/config.js"></script><script type="module" src="/assets/site.js"></script>
+</body></html>
